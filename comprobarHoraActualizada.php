@@ -15,7 +15,7 @@ $delay = 3600 * 2.5;
 $timeNow = date('H:i');
 
 if ($timeNow >= date('08:00') && $timeNow <= date('21:00')) { 
-    if (($dateNow - $lastRefreshDate)>= 1) {
+    if (($dateNow - $lastRefreshDate)>= $delay) {
         getAPIdata();
     }
 }
